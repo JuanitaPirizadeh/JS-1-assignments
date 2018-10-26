@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+<body>
+    
+    <script>
+//Funktionen räknar ut cirkelns area och omkrets med hjälp av dess radie
+//Vi skapar en prompt där vi matar in ett värde = radie 
+    let radie = prompt("Skriv in cirkelns radie i cm");
+
+   
+    function minCirkel(radie){
+    let omkrets = 2 * Math.PI * radie;
+    let area = Math.PI * Math.pow(radie, 2); 
+//Jag skapar en array där jag placerar in omkrets samt area
+    
+    let storlekar = [omkrets.toFixed(2), area.toFixed(2)]; 
+    return (storlekar);
+}
+
+//Med hjälp av variabeln "cirkel" körs funktionen som skapats.
+let cirkel = minCirkel(radie); 
+
+//Dialogruta som meddelar resultatet av funktionen - omkrets och area 
+alert (`Cirkelns omkrets är ${(cirkel[0])} cm och dess area är ${cirkel[1]} cm2`);
+
+        </script>
+    
+</body>
+</html>
