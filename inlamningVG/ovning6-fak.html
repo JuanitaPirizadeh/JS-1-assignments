@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id = 'juan'></h1> 
+   
+    <script>
+
+//Skapar en prompt som läser in det nr vi vill beräkna fakulteten på        
+//Nummret lagras i variabeln nummer
+       
+let nummer = prompt('Skriv in ditt nr');
+
+//Skapar en ytterligare variabel där datatypen fastställs till att gälla siffror
+let nr = Number(nummer);
+let fact = 1; //Tilldelar ett värde, annars skrivs det ut undefined
+
+//funktionen fakultet() beräknar fakulteten på den siffra som matats in i prompten via korrekt formel
+//(fakulteten av 5 = 1 * 2 * 3 * 4 * 5 = 120)
+function fakultet(nummer){              
+     for (i=1; i<=nummer; i++){
+        fact = fact *i;
+        
+}
+return fact; 
+}
+
+//Genom en while-loop sätts villkor för funktionen fakultet() in
+//Villkoret uttrycker att funktionen endast kommer köras om det matas in en siffra mellan 1-1000
+//Om inte kommer en alert-ruta upp med meddelandet 'Not valid nr' upp
+while(true){
+
+if (nr < 1 || nr > 1000){ //eller 
+    alert('Not valid nr'); 
+    
+}
+else {
+    document.getElementById('juan').innerHTML = 'fakulteten är:' + '!' + fakultet(nr);
+    break;
+    //För att resultaten ska visas i webläsaren används metoden document.getElementById();
+}
+}
+   
+   
+        </script>
+</body>
+</html>
